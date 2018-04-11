@@ -27,6 +27,7 @@ class CreateStoresTable extends Migration
             $table->integer('session_key');
             $table->foreign('email')->references('email')->on('password_resets');
             $table->timestamps();
+            // note
         });
     }
 

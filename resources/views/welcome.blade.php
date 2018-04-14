@@ -150,7 +150,7 @@ nav ul  a:hover {
 
 .banner { 
     /* The image used */
-    background-image: url("images/untitles-1.jpg");
+    background-image: url("/images/untitles-1.jpg");
 
     /* Set a specific height */
     height: 700px; 
@@ -276,10 +276,10 @@ a {
         
             <ul >
                 
-                       <li class="item"><a href="#">الرئيسية <img src="images/images.png"></a>   </li>
-                <li class="item"><a href="about.html">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
+                       <li class="item"><a href="welcome.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="about.blade.php">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
             
-              <li class="item"><a href="seller.html"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
+              <li class="item"><a href="seller.blade.php"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
            
                 
              

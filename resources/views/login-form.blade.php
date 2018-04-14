@@ -8,14 +8,15 @@
 
     <title> STORE </title>
     <link rel="icon" href="NOOr-ennab_03.png" />
-    <link rel="stylesheet"  href="seller.css">
+    <link rel="stylesheet"  href="login-form.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
 </head>
+
 <style type="text/css">
-
-
 
     *,body,html{
         padding:0 ;
@@ -26,7 +27,7 @@
     body {
 
         background-size: 100%;
-        background-color:   white;
+        background-color: 	white;
         font-size: 88%;
         font-family: arial;
         line-height: 2;
@@ -122,19 +123,19 @@
         width: 20px;
         height: 20px;
     }
-    input[type=text] {
+    input[type=text3] {
 
         -webkit-transition: width 0.4s ease-in-out;
         transition: width 0.4s ease-in-out;
     }
 
     /* When the input field gets focus, change its width to 100% */
-    input[type=text]:focus {
+    input[type=text3]:focus {
         width: 30%;
         margin-left: 50px;
         border: solid black 1px;
     }
-    input[type=text]:unfocus {
+    input[type=text3]:unfocus {
         height: 30px;
         width: 130px;
     }
@@ -145,7 +146,7 @@
         font-family: sans-serif;;
 
     }
-    input[type=text]{
+    input[type=text3]{
         height: 30px;
         width: 130px;
         margin-top: -47px;
@@ -182,85 +183,6 @@
 
         color: dimgrey;
     }
-
-    /*
-    .banner {
-
-        width: 100%;
-        height: 600px;
-        margin-bottom: 150px;
-        position:scroll;
-
-    }
-    */
-    /*
-
-    .ph1 img {
-
-        width: 20%;
-        height: 500px;
-        margin-right: 60%;
-        margin-top: 50px;
-    }
-
-
-    .ph2 img {
-
-        margin-top: -550px;
-        height: 500px;
-        width: 20%;
-    }
-
-    .ph3 img {
-          margin-left: 60%;
-        margin-top: -490px;
-        height: 500px;
-        width: 20%;
-    }
-    */
-
-
-    .line img{
-
-
-        margin-top: -100px;
-        margin-bottom: 200px;
-    }
-
-
-    .para p{
-        font-size: 20px;
-
-
-
-    }
-    .para span{
-
-        font-size: 50px;
-        margin-top: 300px;
-    }
-
-
-    .line2 img{
-
-
-        margin-top: 200px;
-        margin-bottom: auto;
-    }
-
-    .srch2 img{
-
-        margin-top: -100px;
-        margin-left: 600px;
-    }
-
-    .srch2 p{
-
-        font-size: 40px;
-        margin-top: -80px;
-
-    }
-
     footer {
 
         width: 100%;
@@ -282,42 +204,52 @@
 
     }
 
-    .button {
+    form {
 
-        width: 30%;
-        float: center;
-        height: 100px;
-        text-align: center;
-        text-decoration-color: black;
-        background-color: dimgray;
+        margin-top:150px;
+        margin-bottom: 20px;
         font-size: 20px;
-        margin-bottom: 50px;
-        cursor: pointer;
-        color: gainsboro;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        -webkit-transition: width 0.5s; /* Safari */
-        transition: width 0.5s;
-    }
-
-    .button:hover {
-
-        width: 32%;
+        font-family: arial;
 
     }
 
+    input[type=text] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: dimgrey;
+        color: wgrey;
+    }
+
+    input[type=password] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: dimgrey;
+        color: grey;
+    }
+
+    p {
+
+        margin-bottom: 10px;
+    }
 
     .button1 {
 
-        width: 30%;
+        width: 10%;
         float: center;
-        height: 100px;
+        height: 50px;
         text-align: center;
-        background-color: dimgray;
+        background-color: gainsboro;
         font-size: 20px;
         margin-bottom: -110px;
-        margin-top: 50px;
+        margin-top: 10px;
         cursor: pointer;
-        color: gainsboro;
+        color: dimgray;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         -webkit-transition: width 0.5s; /* Safari */
         transition: width 0.5s;
@@ -325,12 +257,12 @@
 
     .button1:hover {
 
-        width: 32%;
+        width: 13%;
 
     }
 
-
 </style>
+
 
 <body class="body">
 <header>
@@ -343,7 +275,7 @@
 
             <ul >
 
-                <li class="item"><a href="welcome.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="home.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
                 <li class="item"><a href="about.blade.php">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
 
                 <li class="item"><a href="seller.blade.php"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
@@ -353,7 +285,8 @@
             </ul>
             <div class="search"     >
 
-                <h3><input type="text" name="search" placeholder="موجود ولالا"></h3>
+
+                <h3><input type="text3" name="search" placeholder="موجود ولالا"></h3>
             </div>
 
             <div class="login"     >
@@ -367,52 +300,31 @@
 
     </div>
 
+
+    </nav>
+
+
+    </div>
+
 </header>
 
 
+<form action="">
+    إسم المستخدم <br>
+    <input type="text" name="userid">
+    <br>
+    كلمة المرور<br>
+    <input type="password" name="psw">
+</form>
+<p>
+    <a href="#">  هل نسيت كلمة المرور ؟</p></a>
+<br>
+<p>
+    <a href="seller.blade.php">  هل أنت بائع جديد ؟</p></a>
+<br>
+<input type="button" class="button1" value=" تسجيل الدخول
 
-
-
-
-<div class="line ">
-
-    <img src="images/homepage_19.png">
-
-</div>
-<a href="login-form.blade.php">
-    <input type="button" class="button" value=" تسجيل دخول " >
-</a>
-<h1>  أو </h1>
-
-<div class="para ">
-
-
-
-    <span> بائع جديد ؟ </span>
-
-    <p>
-
-
-        إن الموقع يخدم أصحاب المحلات بشكل كبير، حيث يمكنك كبائع عرض منتجاتك بطريقة بسيطة وواضحة، حيث تقوم بالتسجيل داخل الموقع وتقوم بملأ بياناتك في الخانات المطلوبة <br>والموافقة على شروط الموقع، بعد أن تتم عملية التسجيل سيتاح لك خيار إضافة منتج جديد ، حيث تقوم بتعبئة بيانات منتجك في الصفحة الخاصة بالإضافة وتقوم بإضافته، بعد أن يتم الموافقة على منتجك من قبل الموقع، وعند بحث أي زبون عن نوع هاتف بجميع مواصفات أي منتج قمت بإضافته يتمكن من إيجاد اسم محلك وكامل البيانات من تواصل وموقع المحل حتى يقوم بالذهاب إلى محلك والشراء
-
-
-
-    </p>
-
-</div>
-
-<a href="register.blade.php">
-    <input type="button" class="button1" value=" تسجيل بائع جديد ">
-</a>
-
-<div class="line2 ">
-
-    <img src="images/homepage_19.png">
-
-
-</div>
-
-
+ ">
 
 <footer>
 
@@ -422,7 +334,10 @@
 
 </footer>
 
+
+
 </body>
+
 
 </html>
 

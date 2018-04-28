@@ -9,7 +9,7 @@ class color extends Model
 
     public function product()
     {
-        $this->hasMany(Product);
+        $this->hasMany(Product::class);
 
     }
 }

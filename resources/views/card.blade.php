@@ -294,10 +294,10 @@
 
             <ul >
 
-                <li class="item"><a href="home.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
-                <li class="item"><a href="about.blade.php">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
+                <li class="item"><a href="welcome">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="about">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
 
-                <li class="item"><a href="seller.blade.php"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
+                <li class="item"><a href="seller"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
 
 
 
@@ -328,7 +328,8 @@
 
 <div class="card">
 
-    <img src="images/iphone-6s-plus-topic.png"  >
+
+    <a href="slider.blade.php"> <img src="images/iphone-6s-plus-topic.png" title=" شاهد الصور "  ></a>
 
     <div class="container">
         <h4><b>iphone 6</b></h4>

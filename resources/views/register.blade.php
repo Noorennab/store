@@ -345,10 +345,10 @@
 
             <ul >
 
-                <li class="item"><a href="home.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
-                <li class="item"><a href="about.blade.php">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
+                <li class="item"><a href="welcome">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="about">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
 
-                <li class="item"><a href="seller.blade.php"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
+                <li class="item"><a href="seller"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
 
 
 

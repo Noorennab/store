@@ -343,10 +343,10 @@
 
             <ul >
 
-                <li class="item"><a href="welcome.blade.php">الرئيسية <img src="images/images.png"></a>   </li>
-                <li class="item"><a href="about.blade.php">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
+                <li class="item"><a href="welcome">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="about">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
 
-                <li class="item"><a href="seller.blade.php"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
+                <li class="item"><a href="seller"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
 
 
 
@@ -379,7 +379,7 @@
     <img src="images/homepage_19.png">
 
 </div>
-<a href="login-form.blade.php">
+<a href="login-form">
     <input type="button" class="button" value=" تسجيل دخول " >
 </a>
 <h1>  أو </h1>
@@ -401,7 +401,7 @@
 
 </div>
 
-<a href="register.blade.php">
+<a href="register">
     <input type="button" class="button1" value=" تسجيل بائع جديد ">
 </a>
 

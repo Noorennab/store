@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+
     public function store()
     {
-        $this->belongsTo(Store);
+        $this->belongsTo(Store::class);
 
     }
 

@@ -8,7 +8,7 @@ class status extends Model
 {
     public function Product()
     {
-        $this->hasMany(Product);
+        $this->hasMany(Product::class);
 
     }
 }

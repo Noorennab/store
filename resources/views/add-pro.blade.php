@@ -227,11 +227,11 @@
 
             <ul >
 
-                <li class="item"><a href="home-s.blade.php"> الرئيسية <img src="images/images.png"></a>  </li>
+                <li class="item"><a href="home-s"> الرئيسية <img src="images/images.png"></a>  </li>
 
 
-                <li class="item"><a href="#"> إضافة منتج <img src="images/images (3).png"></a>  </li>
-                <li class="item"><a href="contact.blade.php"> تواصل مع الموقع  <img src="images/contact.png"></a>  </li>
+                <li class="item"><a href="add-pro"> إضافة منتج <img src="images/images (3).png"></a>  </li>
+                <li class="item"><a href="contact"> تواصل مع الموقع  <img src="images/contact.png"></a>  </li>
 
 
 

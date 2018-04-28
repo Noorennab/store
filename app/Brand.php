@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class password_reset extends Model
+class Brand extends Model
 {
     public function Product()
     {
-        $this->belongsTo(Store::class);
+        $this->hasMany(Product::class);
 
     }
 }

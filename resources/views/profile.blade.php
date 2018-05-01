@@ -111,14 +111,16 @@
     .search img {
 
         margin-top: -27px;
-        margin-right: 750px;
+        float: right;
+        margin-right: 1033px;
         height: 25px;
         width: 25px;
     }
     .search1 img {
 
         margin-top: -27px;
-        margin-right: 900px;
+        float: right;
+        margin-right: 1110px;
         height: 25px;
         width: 25px;
     }
@@ -307,13 +309,13 @@
             <h1 class="h1"> | </h1>
             <div class="search"     >
 
-                <img  src="images/profile.png" >
+                <a href="profile.html">  <img  src="images/profile.png" ></a>
 
             </div>
 
             <div class="search1"     >
 
-                <img  src="images/makefg.png" >
+                <a href="#"> <img  src="images/makefg.png" ></a>
 
             </div>
 

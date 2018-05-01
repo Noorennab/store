@@ -119,6 +119,7 @@
     .login img {
 
         margin-top: -43px;
+        float: right;
         margin-right: 1300px;
         width: 20px;
         height: 20px;
@@ -468,7 +469,7 @@
 
             <div class="login"     >
 
-                <img  src="images/white-login-512.png" >
+                <a href="login-form"></a> <img  src="images/white-login-512.png" >
 
             </div>
 

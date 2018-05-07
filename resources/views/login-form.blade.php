@@ -310,7 +310,7 @@
 </header>
 
 
-<form action="">
+<form method="POST" action="{{ route('login') }}">
     إسم المستخدم <br>
     <input type="text" name="userid">
     <br>

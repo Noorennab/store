@@ -278,6 +278,13 @@
 
             <ul >
 
+                {{--{{auth()->user()}}--}}
+
+                {{--@foreach(auth()->user()->products as $product)--}}
+                    {{--{{$product->name }}--}}
+                    {{--{{$product->price}}--}}
+
+                {{--\@endforeach--}}
                 <li class="item"><a href="home-s"> الرئيسية <img src="images/images.png"></a>  </li>
 
 

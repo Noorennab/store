@@ -41,18 +41,29 @@ Route::get('/seller', function () {
     return view('seller');
 });
 
+
 //reg and login ---------------------------------
 
-Route::get('/register', function () {
-
-    return view('register');
-});
 
 
-Route::get('/login-form', function () {
+Route::post('/register/submit', 'RegisterController@create');
 
-    return view('login-form');
-});
+
+Auth::routes();
+
+
+//
+//Route::get('/login-form', function () {
+//
+//    return view('login-form');
+//});
+//
+//
+////
+//Route::get('/login', function () {
+//
+//    return view('login-form');
+//});
 
 //   -------------------------------------------------
 
@@ -76,8 +87,8 @@ Route::get('/contact', function () {
 
 Route::get('/profile', function () {
 
-        return view('profile');
-    });
+    return view('profile');
+});
 
 
 Route::get('/home-s', function () {
@@ -108,4 +119,8 @@ Route::get('/search-pro', function () {
 
 Auth::routes();
 Route::resource('products','ProductController');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');

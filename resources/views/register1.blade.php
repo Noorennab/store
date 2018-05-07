@@ -16,7 +16,7 @@
 
 </head>
 
-<style type="text/css">
+<style>
 
 
     *,body,html{
@@ -120,7 +120,6 @@
     .login img {
 
         margin-top: -43px;
-        float: right;
         margin-right: 1300px;
         width: 20px;
         height: 20px;
@@ -251,7 +250,7 @@
         color: white;
     }
 
-    select[name=place] {
+    select[name=store_locate] {
         width: 15%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -332,8 +331,8 @@
         margin-top: 90px;
     }
 
-</style>
 
+</style>
 
 <body class="body">
 <header>
@@ -346,10 +345,10 @@
 
             <ul >
 
-                <li class="item"><a href="welcome">الرئيسية <img src="images/images.png"></a>   </li>
-                <li class="item"><a href="about">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
+                <li class="item"><a href="home1.html">الرئيسية <img src="images/images.png"></a>   </li>
+                <li class="item"><a href="about.html">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
 
-                <li class="item"><a href="seller"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
+                <li class="item"><a href="seller.html"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
 
 
 
@@ -362,7 +361,7 @@
 
             <div class="login"     >
 
-                <a href="login-form"></a> <img  src="images/white-login-512.png" >
+                <img  src="images/white-login-512.png" >
 
             </div>
 
@@ -377,32 +376,33 @@
 
 <h1>  تسجيل </h1>
 
-<form action="">
+<form method="POST" action="{{ route('register') }}">
     <p> إسم المستخدم </p>
-    <input type="text" name="userid">
+    <input type="text" name="user_name" required>
     <br>
     <p>  كلمة المرور</p>
-    <input type="password" name="psw">
+    <input type="password" name="password" required>
     <br>
     <p>   إعادة كتابة كلمة المرور</p>
-    <input type="password" name="psw-repeat">
+    <input type="password" name="password_confirmation" required>
+
     <br>
     <p>إسم المحل </p>
-    <input type="text" name="userid">
+    <input type="text" name="name" required>
 
     <br>
     <p>  إيميل </p>
-    <input type="email" name="email">
+    <input type="email" name="email" required>
     <br>
     <p>رقم الهاتف </p>
-    <input type="text" name="tel" min="0" max="100" s value="00218">
+    <input type="text" name="phone" min="0" max="100" s value="00218" required>
     <br>
     <p> رابط المحل على فيسبوك </p>
-    <input type="text" name="fb-pg">
+    <input type="text" name="fb_page" required>
 
     <br>
     <p> موقع المحل </p>
-    <select name="place">
+    <select name="store_locate">
         <option value="dahra">الظهرة</option>
         <option value="delshara3">شارع الظل</option>
         <option value="zawiatadhmani">زاوية الدهماني</option>

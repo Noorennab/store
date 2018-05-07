@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Store;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/home-s';
 
     /**
      * Create a new controller instance.
@@ -52,6 +53,13 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'password_confirmation' => 'required|string|min:6|confirmed',
+            'store_name' => 'required|string',
+            'phone' => 'required|integer',
+            'fb_page'=> 'required|string',
+            'store_locate' => 'required|string'
+
+
         ]);
     }
 
@@ -67,6 +75,13 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'password_confirmation' => Hash::make($data['password_confirmation']),
+            'store_name' => $data['store_name'],
+            'phone' => $data['phone'],
+            'fb_page'=> $data['fb_page'],
+            'store_locate' => $data['store_locate']
+
+
         ]);
     }
 }

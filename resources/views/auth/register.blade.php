@@ -382,10 +382,10 @@
     <input type="text" name="name" required>
     <br>
     <p>  كلمة المرور</p>
-    <input type="password" name="password" required>
+    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
     <br>
     <p>   إعادة كتابة كلمة المرور</p>
-    <input type="password" name="password_confirmation" required>
+    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
     <br>
     <p>إسم المحل </p>
@@ -396,7 +396,7 @@
     <input type="email" name="email" required>
     <br>
     <p>رقم الهاتف </p>
-    <input type="text" name="phone" min="0" max="100"  value="00218" required>
+    <input type="text" name="phone" required>
     <br>
     <p> رابط المحل على فيسبوك </p>
     <input type="text" name="fb_page" required>

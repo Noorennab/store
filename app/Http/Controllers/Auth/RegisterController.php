@@ -53,12 +53,10 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'password_confirmation' => 'required|string|min:6|confirmed',
             'store_name' => 'required|string',
-            'phone' => 'required|integer',
+            'phone' => 'required',
             'fb_page'=> 'required|string',
-            'store_locate' => 'required|string'
-
+            'store_locate' => 'string'
 
         ]);
     }
@@ -71,11 +69,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+//        dd(request()->all());
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'password_confirmation' => Hash::make($data['password_confirmation']),
             'store_name' => $data['store_name'],
             'phone' => $data['phone'],
             'fb_page'=> $data['fb_page'],

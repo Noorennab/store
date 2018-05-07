@@ -25,7 +25,6 @@
     }
 
     body {
-
         background-size: 100%;
         background-color: 	white;
         font-size: 88%;

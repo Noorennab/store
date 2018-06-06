@@ -249,6 +249,7 @@
     </style>
 
 <form method="POST" action="/login">
+    @csrf
     إسم المستخدم <br>
     <input type="text" name="name">
     <br>
@@ -257,9 +258,9 @@
 <p>
     <a href="#">  هل نسيت كلمة المرور ؟</a></p>
 <br>
-<p> <a href="seller"></a>  هل أنت بائع جديد ؟</p>
+<p> <a href="seller"> هل أنت بائع جديد ؟</a> </p>
 <br>
-<a href="home-s"><input type="submit" class="button1" value=" تسجيل الدخول"></a>
+<input type="submit" class="button1" value=" تسجيل الدخول">
 </form>
 @endsection
 

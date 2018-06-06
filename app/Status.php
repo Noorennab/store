@@ -4,8 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class status extends Model
+class Status extends Model
 {
+    protected $guarded=[];
+
     public function Product()
     {
         $this->hasMany(Product::class);

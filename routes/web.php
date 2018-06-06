@@ -1,28 +1,22 @@
 <?php
 
 // three main -----------------------------------------
-Route::get('welcome', function () {
+Route::get('/home', 'HomeController@index')->name('home');
 
-    return view('welcome');
-});
 
 Route::get('/about','HomeController@about');
 
 Route::get('/seller', function () {
     return view('seller');
 });
+
 //reg and login ---------------------------------
-Route::post('/register/submit', 'RegisterController@create');
 
 Auth::routes();
 
-Route::get('/add-pro', function () {
-    return view('add-pro');
-});
+Route::resource('products','ProductController');
 
-Route::get('/add-pro1', function () {
-    return view('add-pro1');
-});
+
 
 Route::get('/contact', function () {
     return view('contact');
@@ -31,10 +25,6 @@ Route::get('/contact', function () {
 
 Route::get('/profile', function () {
     return view('profile');
-});
-
-Route::get('/home-s', function () {
-    return view('home-s');
 });
 
 //---------------------------------------------------
@@ -51,7 +41,17 @@ Route::get('/search-pro', function () {
     return view('search-pro');
 });
 
-Route::resource('products','ProductController');
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('/dashboard')->middleware(['Admin'])->group(function(){
+    Route::get('/','Admin\DashboardController@index')->name('dashboard');
+    Route::DELETE('/doctors/{doctor}/avatardestroy','Admin\DoctorController@avatarDestroy')->name('dashboard.doctors.avatardestroy');
+    Route::resource('/doctors','Admin\DoctorController');
+    Route::DELETE('/doctors/{doctor}','Admin\DoctorController@destroy')->name('dashboard.doctors.destroy');
+
+    Route::resource('/facilities','Admin\FacilityController');
+    Route::resource('/specialties','Admin\SpecialtyController');
+    Route::resource('/devices','Admin\DeviceController');
+    Route::resource('/types','Admin\TypeController');
+    Route::resource('/users','Admin\UserController');
+});

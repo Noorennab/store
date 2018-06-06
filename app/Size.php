@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class type extends Model
+class Size extends Model
 {
+    protected $guarded=[];
+
     public function Product()
     {
-        $this->hasMany(Product);
+        $this->hasMany(Product::class);
 
     }
 }

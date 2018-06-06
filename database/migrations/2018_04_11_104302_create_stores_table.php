@@ -15,18 +15,12 @@ class CreateStoresTable extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_name');
-            $table->unsignedInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles');
-            $table->string('password');
-            $table->string('email');
+            $table->unsignedInteger('user_id');
             $table->string('name');
-            $table->string('store_locate');
-            $table->string('map_locate');
-            $table->string('fb_page');
-            $table->integer('phone');
-            $table->integer('session_key');
-            $table->foreign('email')->references('email')->on('password_resets');
+            $table->string('store_locate')->nullable();
+            $table->string('map_locate')->nullable();
+            $table->string('fb_page')->nullable();
+            $table->integer('phone')->nullable();
             $table->timestamps();
             // note
         });

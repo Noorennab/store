@@ -580,37 +580,6 @@
     <br>
 
 
-    <!--    <p>  كلمة المرور</p>
-        <input type="password" name="psw">
-     <br>
-         <p>   إعادة كتابة كلمة المرور</p>
-        <input type="password" name="psw-repeat">
-     <br>
-     <p>إسم المحل </p>
-        <input type="text2" name="userid">
-
-        <br>
-      <p>  إيميل </p>
-      <input type="email" name="email">
-    <br>
-     <p>رقم الهاتف </p>
-      <input type="text4" name="tel" min="0" max="100" s value="00218">
-    <br>
-     <p> رابط المحل على فيسبوك </p>
-        <input type="text" name="fb-pg">
-
-        <br>
-    <p> موقع المحل </p>
-      <select name="place">
-        <option value="dahra">الظهرة</option>
-        <option value="delshara3">شارع الظل</option>
-        <option value="zawiatadhmani">زاوية الدهماني</option>
-        <option value="nofliien">النوفليين</option>
-      </select> -->
-
-
-
-
 
 
 

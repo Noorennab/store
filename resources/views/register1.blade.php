@@ -2,18 +2,12 @@
 <html>
 
 
-
-
 <head>
-
     <title> STORE </title>
     <link rel="icon" href="NOOr-ennab_03.png" />
     <link rel="stylesheet"  href="register.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 </head>
 
 <style>
@@ -337,39 +331,21 @@
 <body class="body">
 <header>
     <div class="div1">
-
-
         <nav class="menu">
-
-
-
             <ul >
-
                 <li class="item"><a href="home1.html">الرئيسية <img src="images/images.png"></a>   </li>
                 <li class="item"><a href="about.html">  حول الموقع <img src="images/habitat-icon-white.png"></a> </a>   </li>
-
                 <li class="item"><a href="seller.html"> بائع ؟<img src="images/store.png"></a>  </a>  </li>
-
-
-
             </ul>
-            <div class="search"     >
-
-
+            <div class="search" >
                 <h3><input type="text3" name="search" placeholder="موجود ولالا"></h3>
             </div>
 
-            <div class="login"     >
-
+            <div class="login"  >
                 <img  src="images/white-login-512.png" >
-
             </div>
-
         </nav>
-
-
     </div>
-
 </header>
 
 

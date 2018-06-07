@@ -16,9 +16,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-   //     dd(auth()->check());
         if( auth()->check() &&  (auth()->id() != 1)){
-         // return redirect()->route('dashboard');
             return redirect()->route('home');
         }
         return $next($request);

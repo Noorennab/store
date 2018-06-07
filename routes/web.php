@@ -44,14 +44,8 @@ Route::get('/search-pro', function () {
 
 
 Route::prefix('/dashboard')->middleware(['Admin'])->group(function(){
-    Route::get('/','Admin\DashboardController@index')->name('dashboard');
-    Route::DELETE('/doctors/{doctor}/avatardestroy','Admin\DoctorController@avatarDestroy')->name('dashboard.doctors.avatardestroy');
+    Route::get('/',function (){
+        return view('admin.index');
+    });
     Route::resource('/doctors','Admin\DoctorController');
-    Route::DELETE('/doctors/{doctor}','Admin\DoctorController@destroy')->name('dashboard.doctors.destroy');
-
-    Route::resource('/facilities','Admin\FacilityController');
-    Route::resource('/specialties','Admin\SpecialtyController');
-    Route::resource('/devices','Admin\DeviceController');
-    Route::resource('/types','Admin\TypeController');
-    Route::resource('/users','Admin\UserController');
 });

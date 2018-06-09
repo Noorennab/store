@@ -388,10 +388,6 @@
     <br>
     <p> موقع المحل على الخريطة </p>
     <div id="map">
-
-
-
-
     </div>
 
     <input type="submit" value=" تسجيل  ">

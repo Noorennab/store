@@ -14,6 +14,7 @@
     <link href="{{ asset('/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
     <link href="{{ asset('/css/sb-admin.min.css')}}" rel="stylesheet">
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

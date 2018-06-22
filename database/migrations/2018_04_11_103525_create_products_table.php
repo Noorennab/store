@@ -22,6 +22,8 @@ class CreateProductsTable extends Migration
             $table->foreign('type_id')->references('id')->on('types');
             $table->unsignedInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('models');
+            $table->unsignedInteger('status_id');
+            $table->foreign('status')->references('id')->on('statuses');
             $table->unsignedInteger('color_id');
             $table->foreign('color_id')->references('id')->on('colors');
             $table->unsignedInteger('size_id');

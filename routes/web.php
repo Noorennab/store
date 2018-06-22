@@ -13,6 +13,10 @@ Route::get('/seller', function () {
 //reg and login ---------------------------------
 
 Auth::routes();
+//
+Route::get('product',function (){
+    return view('products.show');
+});
 
 Route::resource('products','ProductController');
 

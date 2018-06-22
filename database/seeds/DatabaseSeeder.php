@@ -1,5 +1,6 @@
 <?php
 
+use App\Brand;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,10 +42,105 @@ class DatabaseSeeder extends Seeder
         $user->save();
 
 
-        $store= new \App\Store();
-        $store->user_id=2;
-        $store->name='store';
-        $store->phone=364865483;
-        $store->save();
+
+        $brand = new Brand();
+        $brand->id = 2;
+        $brand->name = 'Apple';
+        $brand->save();
+
+        $brand = new Brand();
+        $brand->id = 3;
+        $brand->name = 'Samsung';
+        $brand->save();
+
+        $brand = new Brand();
+        $brand->id = 4;
+        $brand->name = 'Huawei';
+        $brand->save();
+
+
+        $brand = new \App\Type();
+        $brand->id = 2;
+        $brand->name = 'iphone x';
+        $brand->save();
+
+        $brand = new \App\Type();
+        $brand->id = 3;
+        $brand->name = 'galaxy S9';
+        $brand->save();
+
+        $brand = new \App\Type();
+        $brand->id = 4;
+        $brand->name = 'mate 10';
+        $brand->save();
+
+
+        $brand = new \App\Size();
+        $brand->id = 2;
+        $brand->value = '8';
+        $brand->save();
+
+        $brand = new \App\Size();
+        $brand->id = 3;
+        $brand->value = '16';
+        $brand->save();
+
+        $brand = new \App\Size();
+        $brand->id = 4;
+        $brand->value = '32';
+        $brand->save();
+
+        $brand = new \App\Size();
+        $brand->id = 5;
+        $brand->value = '64';
+        $brand->save();
+
+
+
+        $brand = new \App\Status();
+        $brand->id = 2;
+        $brand->name = 'acceptable';
+        $brand->save();
+
+        $brand = new \App\Status();
+        $brand->id = 3;
+        $brand->name = 'good';
+        $brand->save();
+
+        $brand = new \App\Status();
+        $brand->id = 4;
+        $brand->name = 'excellent';
+        $brand->save();
+
+        $brand = new \App\Status();
+        $brand->id = 5;
+        $brand->name = 'new';
+        $brand->save();
+
+
+
+        $brand = new \App\color();
+        $brand->id = 2;
+        $brand->name = 'white';
+        $brand->save();
+
+        $brand = new \App\color();
+        $brand->id = 3;
+        $brand->name = 'red';
+        $brand->save();
+
+        $brand = new \App\color();
+        $brand->id = 4;
+        $brand->name = 'black';
+        $brand->save();
+
+        $brand = new \App\color();
+        $brand->id = 5;
+        $brand->name = 'gold';
+        $brand->save();
+
+
+
+
     }
 }

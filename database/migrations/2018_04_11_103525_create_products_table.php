@@ -23,13 +23,13 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('models');
             $table->unsignedInteger('status_id');
-            $table->foreign('status')->references('id')->on('statuses');
+            $table->foreign('status_id')->references('id')->on('statuses');
             $table->unsignedInteger('color_id');
             $table->foreign('color_id')->references('id')->on('colors');
             $table->unsignedInteger('size_id');
             $table->foreign('size_id')->references('id')->on('sizes');
             $table->integer('price');
-            $table->text('Notes');
+            $table->text('Notes')->nullable();
 
             $table->timestamps();
         });

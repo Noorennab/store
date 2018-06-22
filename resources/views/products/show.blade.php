@@ -15,6 +15,7 @@
                 </div>
             </div>
             <!-- /.col-lg-3 -->
+            <img src="{{$doctor->getMedia('avatar')->first()->getUrl('thumb')}}" class="img-fluid">
 
             <div class="col-lg-9">
 

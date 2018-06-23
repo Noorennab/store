@@ -51,5 +51,6 @@ Route::prefix('/dashboard')->middleware(['Admin'])->group(function(){
     Route::get('/',function (){
         return view('admin.index');
     });
+
     Route::resource('/doctors','Admin\DoctorController');
 });

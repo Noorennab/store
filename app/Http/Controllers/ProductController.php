@@ -53,7 +53,7 @@ class ProductController extends Controller
 
         $product=new Product();
         $product->name =request('name');
-        $product->store_id =2;
+        $product->store_id =auth()->user()->stores->first()->id;
         $product->brand_id =request('brand_id');
         $product->type_id =request('type_id');
         $product->color_id =request('color_id');
@@ -64,8 +64,13 @@ class ProductController extends Controller
 
         if (\request()->hasFile('images'))
         {
-            $product->refresh()->addMedia(\request('avatar'))->toMediaCollection('thumb');
-        }
+            foreach($request->file('images') as $image) {
+                $product->addMedia($image)->toMediaCollection('images');
+            }
+        };
+
+
+        return redirect('/home');
 
     }
 
@@ -75,9 +80,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+
+        return view('products.show',compact('product'));
     }
 
     /**

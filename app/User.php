@@ -27,11 +27,19 @@ class User extends Authenticatable
 
     public function stores()
     {
-        $this->hasMany(Store::class);
+       return $this->hasMany(Store::class);
     }
 
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    public function isAdmin(){
+        return $this->role()->name=='admin';
+    }
+
+    public function isStore(){
+        return $this->role()->name=='store';
     }
 }

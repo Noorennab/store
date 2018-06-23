@@ -23,7 +23,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <form id="form" method="POST" action="/products">
+                                <form id="form" method="POST" action="/products" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group row">
                                         <label for="name"
@@ -162,6 +162,22 @@
                                             @if ($errors->has('price'))
                                                 <span class="invalid-feedback">
                                         <strong>{{ $errors->first('price') }}</strong>
+                                    </span>
+                                            @endif
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <label for="purchase_price"
+                                               class="col-md-2 col-form-label text-md-right"> Images</label>
+                                        <div class="col-md-6">
+                                            <input id="images" type="file"
+                                                   class="form-control{{ $errors->has('images') ? ' is-invalid' : '' }}"
+                                                   name="images[]" required multiple>
+                                            @if ($errors->has('images'))
+                                                <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('images') }}</strong>
                                     </span>
                                             @endif
                                         </div>

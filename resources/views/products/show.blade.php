@@ -7,23 +7,22 @@
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="my-4">Shop Name</h1>
+                <h1 class="my-4">{{$product->store->name}}</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    <a href="#" class="list-group-item active"><a href="{{$product->store->fb_bage}}">Facebook Page</a></a>
+                    <a href="#" class="list-group-item">Location: {{$product->store->location}}</a>
+                    <a href="#" class="list-group-item">Phone: {{$product->store->phone}}</a>
                 </div>
             </div>
             <!-- /.col-lg-3 -->
-            <img src="{{$doctor->getMedia('avatar')->first()->getUrl('thumb')}}" class="img-fluid">
 
             <div class="col-lg-9">
 
                 <div class="card mt-4">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+                    <img class="card-img-top img-fluid" src="{{$product->getMedia('images')->first()->getUrl()}}" alt="">
                     <div class="card-body">
-                        <h3 class="card-title">Product Name</h3>
-                        <h4>$24.99</h4>
+                        <h3 class="card-title">{{$product->name}}</h3>
+                        <h4>${{$product->price}}</h4>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
                         <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
                         4.0 stars

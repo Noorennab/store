@@ -36,10 +36,13 @@ class User extends Authenticatable
     }
 
     public function isAdmin(){
-        return $this->role()->name=='admin';
+        return $this->role->name=='admin';
     }
 
     public function isStore(){
-        return $this->role()->name=='store';
+        return $this->role->name=='store';
+    }
+    public function products(){
+        return $this->stores->first()->products;
     }
 }

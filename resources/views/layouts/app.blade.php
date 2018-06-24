@@ -52,6 +52,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            @if(Auth()->check() && Auth()->user()->isAdmin())
+                                <a class="nav-link" href="/dashboard">Dashboard</a>
+                            @elseif(Auth()->check() && Auth()->user()->isStore())
+                                <a class="nav-link" href="/mystore">My Store</a>
+                            @endif
+                        </li>
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل دخول') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('إنشاء حساب') }}</a></li>

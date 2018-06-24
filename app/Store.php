@@ -9,9 +9,9 @@ class Store extends Model
 {
     protected $guarded=[];
 
-    public function Product()
+    public function products()
     {
-        $this->hasMany(Product::class);
+       return $this->hasMany(Product::class);
 
     }
 

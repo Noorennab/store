@@ -2,12 +2,13 @@
 
 // three main -----------------------------------------
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
 
 
 Route::get('/about','HomeController@about');
 
-Route::get('/seller', function () {
-    return view('seller');
+Route::get('/mystore', function () {
+    return view('stores.mystore');
 });
 
 //reg and login ---------------------------------

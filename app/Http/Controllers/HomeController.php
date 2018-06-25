@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Brand;
+use App\Color;
 use App\Product;
+use App\Size;
+use App\Status;
+use App\Type;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products=Product::all();
+            $products=Product::all();
         return view('home',compact('products'));
     }
 }

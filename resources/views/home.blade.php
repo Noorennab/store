@@ -2,18 +2,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-3">
 
-            <h1 class="my-4">Shop Name</h1>
-            <div class="list-group">
-                <a href="#" class="list-group-item">Category 1</a>
-                <a href="#" class="list-group-item">Category 2</a>
-                <a href="#" class="list-group-item">Category 3</a>
-            </div>
 
-        </div>
-        <!-- /.col-lg-3 -->
-
+        @include('layouts.search')
         <div class="col-lg-9">
 
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -23,13 +14,13 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="{{$products->last()->getMedia('images')->first()->getUrl()}}" alt="First slide">
-                    </div>
-                    @php($products->pop())
-                    <div class="carousel-item">
-                        <img class="d-block img-fluid" src="{{$products->last()->getMedia('images')->first()->getUrl()}}" alt="Second slide">
-                    </div>
+                    {{--<div class="carousel-item active">--}}
+                        {{--<img class="d-block img-fluid" src="{{$products->last()->getMedia('images')->first()->getUrl()}}" alt="First slide">--}}
+                    {{--</div>--}}
+                    {{--@php($products->pop())--}}
+                    {{--<div class="carousel-item">--}}
+                        {{--<img class="d-block img-fluid" src="{{$products->last()->getMedia('images')->first()->getUrl()}}" alt="Second slide">--}}
+                    {{--</div>--}}
                     {{--@php($products->pop())--}}
                     {{--<div class="carousel-item">--}}
                         {{--<img class="d-block img-fluid" src="{{$products->last()->getMedia('images')->first()->getUrl()}}" alt="Third slide">--}}

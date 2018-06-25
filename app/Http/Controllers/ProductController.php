@@ -92,9 +92,15 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        $brands=Brand::all();
+        $statuses=Status::all();
+        $sizes=Size::all();
+        $types=Type::all();
+        $colors=Color::all();
+
+        return view('products.edit',compact('product','brands','sizes','statuses','types','colors'));
     }
 
     /**
@@ -104,9 +110,27 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Product $product)
     {
-        //
+        $product->name =request('name');
+        $product->store_id =auth()->user()->stores->first()->id;
+        $product->brand_id =request('brand_id');
+        $product->type_id =request('type_id');
+        $product->color_id =request('color_id');
+        $product->size_id=request('size_id');
+        $product->status_id=request('status_id');
+        $product->price =request('price');
+        $product->save();
+
+        if (\request()->hasFile('images'))
+        {
+            foreach(request('images') as $image) {
+                $product->addMedia($image)->toMediaCollection('images');
+            }
+        };
+
+        return redirect('/mystore');
+
     }
 
     /**
@@ -115,8 +139,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+
+        $product->delete();
+
+        return redirect('/mystore');
     }
 }

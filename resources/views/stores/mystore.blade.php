@@ -27,13 +27,18 @@
                                         <th>{{$product->brand->name}}</th>
                                         <td>{{$product->price}}</td>
                                         <td>
-                                            <a class="btn btn-info" href="/products/edit">Edit</a>
-                                            <button type="button" class="btn btn-danger" data-toggle="modal"
-                                                    data-target="#d{{$product->id}}">Delete
-                                            </button>
+                                            <a class="btn btn-info" href="/products/{{$product->id}}/edit">Edit</a>
+                                            {{--<button type="button" class="btn btn-danger" data-toggle="modal"--}}
+                                                    {{--data-target="#{{$product->id}}">Delete--}}
+                                            {{--</button>--}}
+                                            <form method="post" action="/products/{{$product->id}}">
+                                                @method('DELETE')
+                                                @csrf
+                                                    <button type="submit" class="btn btn-danger">delete</button>
+                                            </form>
                                         </td>
                                     </tr>
-                                    @include('layouts.modal',['item'=>$product,'id'=>"d{$product->id}",'method'=>'DELETE','action'=>''])
+{{--                                    @include('layouts.modal',['item'=>$product,'id'=>"{$product->id}",'method'=>'DELETE','action'=>'/products'])--}}
                                 @endforeach
                                 </tbody>
                             </table>

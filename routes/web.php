@@ -47,11 +47,10 @@ Route::get('/search-pro', function () {
 });
 
 
+Route::get('/search','SearchController@search');
 
 Route::prefix('/dashboard')->middleware(['Admin'])->group(function(){
     Route::get('/',function (){
         return view('admin.index');
     });
-
-    Route::resource('/doctors','Admin\DoctorController');
 });

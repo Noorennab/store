@@ -42,6 +42,16 @@ class DatabaseSeeder extends Seeder
         $user->save();
 
 
+        $store= new \App\Store();
+        $store->name='store';
+        $store->user_id=2;
+        $store->store_locate= 'الظهرة';
+        $store->map_locate='';
+        $store->fb_page='http://facebook.ocm';
+        $store->phone=364865483;
+        $store->save();
+
+
 
         $brand = new Brand();
         $brand->id = 2;

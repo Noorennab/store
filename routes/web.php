@@ -20,6 +20,7 @@ Route::get('product',function (){
 });
 
 Route::resource('products','ProductController');
+Route::resource('stores','StoreController');
 
 
 
@@ -33,18 +34,18 @@ Route::get('/profile', function () {
 });
 
 //---------------------------------------------------
+//
+//Route::get('/card', function () {
+//    return view('card');
+//});
 
-Route::get('/card', function () {
-    return view('card');
-});
+//Route::get('/slider', function () {
+//    return view('slider');
+//});
 
-Route::get('/slider', function () {
-    return view('slider');
-});
-
-Route::get('/search-pro', function () {
-    return view('search-pro');
-});
+//Route::get('/search-pro', function () {
+//    return view('search-pro');
+//});
 
 
 Route::get('/search','SearchController@search');

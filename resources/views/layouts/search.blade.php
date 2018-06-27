@@ -1,6 +1,6 @@
 <div class="col-lg-3">
 
-    <div class="list-group">
+    {{--<div class="list-group">--}}
 
     <div class="panel panel-default">
         <div class="panel-heading">Search</div>
@@ -70,4 +70,4 @@
 
 
 </div>
-</div>
+{{--</div>--}}

@@ -23,7 +23,7 @@
 
 </head>
 <body >
-    <div id="app">
+    <div id="app" style="min-height:620px;">
         <nav class="navbar navbar-expand-md navbar-light navbar-dark bg-dark  navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -50,7 +50,7 @@
                             {{--<a class="nav-link" href="#">Services</a>--}}
                         {{--</li>--}}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="/contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             @if(Auth()->check() && Auth()->user()->isAdmin())

@@ -7,9 +7,10 @@
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="my-4">{{$product->store->name}}</h1>
+                <h1 class="my-4">ddd</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active"><a href="{{$product->store->fb_bage}}">Facebook Page</a></a>
+                    <a href="/stores/{{$product->id}}" class="list-group-item active">{{$product->store->name}}</a>
+                    <a href="{{$product->store->fb_bage}}" class="list-group-item">Facebook Page</a>
                     <a href="#" class="list-group-item">Location: {{$product->store->location}}</a>
                     <a href="#" class="list-group-item">Phone: {{$product->store->phone}}</a>
                 </div>

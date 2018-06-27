@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Collection;
 
 class User extends Authenticatable
 {
@@ -43,6 +44,7 @@ class User extends Authenticatable
         return $this->role->name=='store';
     }
     public function products(){
+       if ($this->stores->first()==null)return new Collection();
         return $this->stores->first()->products;
     }
 }

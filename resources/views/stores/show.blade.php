@@ -7,11 +7,11 @@
         <div class="row">
 
             <div class="col-lg-3">
-                <h1 class="my-4">{{$product->store->name}}</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active"><a href="{{$product->store->fb_bage}}">Facebook Page</a></a>
-                    <a href="#" class="list-group-item">Location: {{$product->store->location}}</a>
-                    <a href="#" class="list-group-item">Phone: {{$product->store->phone}}</a>
+                    <a href="{{$store->id}}" class="list-group-item active">{{$store->name}}</a></a>
+                    <a href="{{$store->fb_bage}}" class="list-group-item ">Facebook Page</a></a>
+                    <a href="#" class="list-group-item">Location: {{$store->location}}</a>
+                    <a href="#" class="list-group-item">Phone: {{$store->phone}}</a>
                 </div>
             </div>
             <!-- /.col-lg-3 -->
@@ -51,7 +51,7 @@
 
                 <div class="row">
 
-                    @foreach($products as $product)
+                    @foreach($store->products as $product)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
                                 <a href="#"><img class="card-img-top" src="{{$product->getMedia('images')->first()->getUrl('thumb')}}" alt=""></a>
@@ -59,7 +59,7 @@
                                     <h4 class="card-title">
                                         <a href="/products/{{$product->id}}">{{$product->name}}</a>
                                     </h4>
-                                    <h5>{{$product->price}}</h5>
+                                    <h5>${{$product->price}}</h5>
                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
                                 </div>
                                 <div class="card-footer">

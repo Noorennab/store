@@ -71,17 +71,17 @@ class DatabaseSeeder extends Seeder
 
         $brand = new \App\Type();
         $brand->id = 2;
-        $brand->name = 'iphone x';
+        $brand->name = 'cheque';
         $brand->save();
 
         $brand = new \App\Type();
         $brand->id = 3;
-        $brand->name = 'galaxy S9';
+        $brand->name = 'credit card';
         $brand->save();
 
         $brand = new \App\Type();
         $brand->id = 4;
-        $brand->name = 'mate 10';
+        $brand->name = 'cash';
         $brand->save();
 
 

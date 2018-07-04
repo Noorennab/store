@@ -1,11 +1,12 @@
 <div class="col-lg-3">
 
     {{--<div class="list-group">--}}
-
+    <form action="/search" method="get" enctype="multipart/form-data">
     <div class="panel panel-default">
-        <div class="panel-heading">Search</div>
+        <div class="panel-heading"> phone name  <input style="margin: 10px 0px "  class="js-example-basic-single form-control" id="name1" type="text" placeholder="search"> </div>
+
         <div class="panel-body">
-            <form action="/search" method="get" enctype="multipart/form-data">
+
                 <div class="form-group">
                     <label for="model">Brand</label>
                     <select class="js-example-basic-single form-control" name="brand_id">
@@ -17,7 +18,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="km">Model</label>
+                    <label for="km">pay Method</label>
                     <select class="js-example-basic-single form-control" name="type_id">
                         <option value={{null}}>all</option>
                         @foreach(\App\Type::all() as $type)

@@ -11,6 +11,16 @@ Route::get('/mystore', function () {
     return view('stores.mystore');
 });
 
+Route::get('/welcome', function () {
+    return view('layouts.guest');
+});
+
+Route::prefix('/mystores')->middleware(['Admin'])->group(function(){
+    Route::get('/',function (){
+        return view('admin.mystores');
+    });
+});
+
 //reg and login ---------------------------------
 
 Auth::routes();

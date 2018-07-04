@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>{{ config('app.name', 'متجر الهواتف') }}</title>
+    <title>find my phone</title>
     <!-- Bootstrap core CSS-->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -82,7 +82,7 @@
             </form>
             <div class="text-center">
                 <a class="d-block small mt-3" href="/login">Login Page</a>
-                <a class="d-block small" href="/password/reset">Forgot Password?</a>
+                {{--<a class="d-block small" href="/password/reset">Forgot Password?</a>--}}
             </div>
         </div>
     </div>

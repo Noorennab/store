@@ -3,7 +3,7 @@
     <section class="charts">
         <div class="container">
             <header>
-                <h1 class="h3">All Products</h1>
+                <h1 class="h3">All Stores</h1>
             </header>
             <div class="row">
                 <div class="col-lg-9">
@@ -29,16 +29,16 @@
                                         <td>
                                             <a class="btn btn-info" href="/products/{{$product->id}}/edit">Edit</a>
                                             {{--<button type="button" class="btn btn-danger" data-toggle="modal"--}}
-                                                    {{--data-target="#{{$product->id}}">Delete--}}
+                                            {{--data-target="#{{$product->id}}">Delete--}}
                                             {{--</button>--}}
                                             <form method="post" action="/products/{{$product->id}}">
                                                 @method('DELETE')
                                                 @csrf
-                                                    <button type="submit" class="btn btn-danger">delete</button>
+                                                <button type="submit" class="btn btn-danger">delete</button>
                                             </form>
                                         </td>
                                     </tr>
-{{--                                    @include('layouts.modal',['item'=>$product,'id'=>"{$product->id}",'method'=>'DELETE','action'=>'/products'])--}}
+                                    {{--                                    @include('layouts.modal',['item'=>$product,'id'=>"{$product->id}",'method'=>'DELETE','action'=>'/products'])--}}
                                 @endforeach
                                 </tbody>
                             </table>
@@ -51,4 +51,4 @@
     </section>
 
 
-    @endsection
+@endsection

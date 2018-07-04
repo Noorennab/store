@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'متجر الهواتف') }}</title>
+    <title>find my phone{{--{{ config('app.name', 'متجر الهواتف') }}--}}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,8 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-dark bg-dark  navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{--{{ config('app.name', 'find my phone') }}--}}
+                    find my phone
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -52,6 +53,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Contact</a>
                         </li>
+
+                        <li class="nav-item">
+                            {{--@if(Auth()->check() && Auth()->user()->isAdmin())--}}
+                                {{--<a class="nav-link" href="/dashboard">Dashboard</a>--}}
+                            @if(Auth()->check() && Auth()->user()->isStore())
+                                <a class="nav-link" href="/products/create">add product</a>
+                            @endif
+                        </li>
+
+
+
+
+
                         <li class="nav-item">
                             @if(Auth()->check() && Auth()->user()->isAdmin())
                                 <a class="nav-link" href="/dashboard">Dashboard</a>
@@ -93,7 +107,7 @@
 
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+            <p class="m-0 text-center text-white">Copyright &copy; F.M.P website 2018</p>
         </div>
         <!-- /.container -->
     </footer>

@@ -7,9 +7,9 @@
 
                 <h1 class="my-4">Shop Name</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    {{--<a href="#" class="list-group-item">Category 1</a>--}}
+                    {{--<a href="#" class="list-group-item">Category 2</a>--}}
+                    {{--<a href="#" class="list-group-item">Category 3</a>--}}
                 </div>
 
             </div>
@@ -65,10 +65,10 @@
 
                                     <div class="form-group row">
                                         <label for="model_id"
-                                               class="col-md-2 col-form-label text-md-right">Model</label>
+                                               class="col-md-2 col-form-label text-md-right">pay Method</label>
                                         <div class="col-md-6">
                                             <select id="model_id"  name="type_id" class="custom-select">
-                                                <option disabled selected>Select Brand</option>
+                                                <option disabled selected>select method</option>
                                                 @foreach($types as $type)
                                                     <option value="{{$type->id}}"
                                                             @if($type->id == old('model_id'))
@@ -110,7 +110,7 @@
 
                                     <div class="form-group row">
                                         <label for="color"
-                                               class="col-md-2 col-form-label text-md-right">color</label>
+                                               class="col-md-2 col-form-label text-md-right">Status</label>
                                         <div class="col-md-6">
                                             <select id="status" name="status_id" class="custom-select">
                                                 <option disabled selected>Select status</option>
@@ -189,7 +189,8 @@
                                                class="col-md-2 col-form-label text-md-right">Notes</label>
                                         <div class="col-md-6">
                                         <textarea class="form-control"
-                                                  name="notes">{{old('notes')}}</textarea>
+                                                  name="notes" value="{{ old('Notes') }}"></textarea>
+
                                         </div>
                                     </div>
                                     <div class="form-group row mb-0">

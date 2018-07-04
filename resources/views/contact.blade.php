@@ -81,15 +81,15 @@
             <div class="col-md-4 col-xl-3">
                 <ul class="contact-icons">
                     <li><i class="fa fa-map-marker fa-2x"></i>
-                        <p>San Francisco, CA 94126, USA</p>
+                        <p>Tripoli Libya </p>
                     </li>
 
                     <li><i class="fa fa-phone fa-2x"></i>
-                        <p>+ 01 234 567 89</p>
+                        <p>+ 218 91 00000000</p>
                     </li>
 
                     <li><i class="fa fa-envelope fa-2x"></i>
-                        <p>contact@mdbootstrap.com</p>
+                        <p>contact@fmp.com</p>
                     </li>
                 </ul>
             </div>

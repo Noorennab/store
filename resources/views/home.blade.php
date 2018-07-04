@@ -48,10 +48,10 @@
                                     <a href="/products/{{$product->id}}">{{$product->name}}</a>
                                 </h4>
                                 <h5>${{$product->price}}</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                                <p class="card-text">{{$product->Notes}}</p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                {{--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--}}
                             </div>
                         </div>
                     </div>

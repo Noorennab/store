@@ -19,7 +19,9 @@
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Register an Store</div>
         <div class="card-body">
-            <form>
+
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
@@ -34,12 +36,12 @@
                 </div>
                 <div class="form-group">
                     <label for="store_name">Store Name</label>
-                    <input class="form-control" id="store_name" name="store_name" type="text" aria-describedby="emailHelp" placeholder="Your store Name">
+                    <input class="form-control" id="store_name" name="name" type="text" aria-describedby="emailHelp" placeholder="Your store Name">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input name="email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone No.</label>
@@ -70,11 +72,11 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <label for="exampleInputPassword1">Password</label>
-                            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+                            <input name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
                         </div>
                         <div class="col-md-6">
                             <label for="exampleConfirmPassword">Confirm password</label>
-                            <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
+                            <input class="form-control" id="exampleConfirmPassword" type="password"  name="password_confirmation" placeholder="Confirm password">
                         </div>
                     </div>
                 </div>

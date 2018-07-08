@@ -15,7 +15,6 @@
 
 						@endforeach
 
-						@include('flash::message')
 
 					</ul>
 

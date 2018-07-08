@@ -19,6 +19,7 @@
     <div class="card card-register mx-auto mt-5">
         <div class="card-header">Register an Store</div>
         <div class="card-body">
+            @include('layouts.alerts')
 
             <form method="POST" action="{{ route('register') }}">
                 @csrf

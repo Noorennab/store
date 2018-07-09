@@ -63,11 +63,6 @@
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="fb_page">Your location In Map</label>
-                    <div id="map">
-                    </div>
-                </div>
 
                 <div class="form-group">
                     <div class="form-row">

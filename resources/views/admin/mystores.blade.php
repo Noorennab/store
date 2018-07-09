@@ -21,24 +21,25 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach(Auth()->user()->products() as $product)
+                                @foreach(\App\Store::all() as $store)
                                     <tr>
-                                        <th scope="row">{{$product->id}}</th>
-                                        <th>{{$product->name}}</th>
-                                        <td>{{$product->price}}</td>
+                                        <th scope="row">{{$store->id}}</th>
+                                        <th>{{$store->name}}</th>
+                                        <td>{{$store->price}}</td>
                                         <td>
-                                            <a class="btn btn-info" href="/products/{{$product->id}}/edit">Edit</a>
-                                            {{--<button type="button" class="btn btn-danger" data-toggle="modal"--}}
-                                            {{--data-target="#{{$product->id}}">Delete--}}
-                                            {{--</button>--}}
-                                            <form method="post" action="/products/{{$product->id}}">
-                                                @method('DELETE')
+                                            <a class="btn btn-info" href="/stores/{{$store->id}}/edit">Edit</a>
+
+                                            <form method="post" action="/stores/suspend/{{$store->id}}">
                                                 @csrf
-                                                <button type="submit" class="btn btn-danger">delete</button>
+                                                @if($store->suspend()==0)
+                                                    <button type="submit" class="btn btn-danger">suspend</button>
+                                                @else
+
+                                                    @endif
                                             </form>
                                         </td>
                                     </tr>
-                                    {{--                                    @include('layouts.modal',['item'=>$product,'id'=>"{$product->id}",'method'=>'DELETE','action'=>'/products'])--}}
+                                    {{--                                    @include('layouts.modal',['item'=>$store,'id'=>"{$store->id}",'method'=>'DELETE','action'=>'/products'])--}}
                                 @endforeach
                                 </tbody>
                             </table>

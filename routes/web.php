@@ -30,6 +30,10 @@ Route::get('product',function (){
 });
 
 Route::resource('products','ProductController');
+
+Route::post('stores/update/{store}',"StoreController@update");
+Route::post('/stores/suspend/{store}',"StoreController@suspend");
+
 Route::resource('stores','StoreController');
 
 

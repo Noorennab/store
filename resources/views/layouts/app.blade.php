@@ -74,8 +74,8 @@
                             @endif
                         </li>
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('تسجيل دخول') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('إنشاء حساب') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('login') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('create store') }}</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -86,7 +86,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('تسجيل خروج') }}
+                                        {{ __('logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

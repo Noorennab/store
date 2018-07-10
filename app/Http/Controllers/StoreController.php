@@ -37,6 +37,9 @@ class StoreController extends Controller
     public function suspend(Store $store)
     {
 
+        $store->update([
+            'suspended'=>\request('suspended')
+        ]);
         return redirect()->back();
     }
 }

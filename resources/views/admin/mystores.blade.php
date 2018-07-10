@@ -29,14 +29,21 @@
                                         <td>
                                             <a class="btn btn-info" href="/stores/{{$store->id}}/edit">Edit</a>
 
-                                            <form method="post" action="/stores/suspend/{{$store->id}}">
-                                                @csrf
-                                                @if($store->suspend()==0)
-                                                    <button type="submit" class="btn btn-danger">suspend</button>
-                                                @else
 
+                                                @if($store->suspended==0)
+                                                <form method="post" action="/stores/suspend/{{$store->id}}">
+                                                    @csrf
+                                                    <input name="suspended" hidden value="1">
+                                                    <button type="submit" class="btn btn-danger">suspend</button>
+                                                </form>
+                                                @else
+                                                <form method="post" action="/stores/suspend/{{$store->id}}">
+                                                    @csrf
+                                                    <input  name="suspended" hidden value="0">
+                                                    <button type="submit" class="btn btn-danger">unsuspend</button>
+                                                </form>
                                                     @endif
-                                            </form>
+
                                         </td>
                                     </tr>
                                     {{--                                    @include('layouts.modal',['item'=>$store,'id'=>"{$store->id}",'method'=>'DELETE','action'=>'/products'])--}}

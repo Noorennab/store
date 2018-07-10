@@ -24,5 +24,4 @@ class Store extends Model
         return 0;
     }
 
-
 }
